@@ -1,0 +1,10 @@
+log /var/log/3proxy/3proxy.log
+logformat "- +_L%t.%. %N.%p %E %U %C:%c %R:%r %O %I %h %T"
+rotate 10
+
+external 0.0.0.0
+internal 0.0.0.0
+
+auth none
+maxconn 384
+socks -p8080
